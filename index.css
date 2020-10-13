@@ -1,0 +1,42 @@
+input {
+    width: 500px;
+    height: 56px; 
+    border-radius: 10px;  
+    margin-bottom: 1rem; 
+}
+
+.firstname:hover {
+    border: 1px solid #333333    ;
+}
+
+.firstname:focus {
+    border: 1px solid #2962FF;
+    outline: none;
+}
+
+.lastName {
+   border: 1px solid #D32F2F;
+}
+
+.lastName:hover {
+    border: 1px solid #333333;
+}
+
+.lastName:focus {
+    outline: none;
+    border: 1px solid #D32F2F;
+}
+
+input[type="text"]:disabled  {
+    background-color: #E0E0E0;
+    color: #9E9E9E;
+    background-color: rebeccapurple;
+}
+
+
+.form {
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
