@@ -38,21 +38,22 @@ class App extends React.Component {
                     <input
                         type="text"
                         name="firstName"
-                        placeholder="First Name"
+                        placeholder="Placeholder"
                     />
                     <br />
-                    {`Label`}
+                    {`<Input startIcon />`}
                     <input
                         type="text"
-                        name="startIcon"
-                        placeholder="First Name"
+                        icon="iconStart"
+                        className="fa fa-phone fa-lg fa-fw"
+                        placeholder="Placeholder"
                     />
                     <br />
-                    {`Label`}
+                    {`<Input endIcon />`}
                     <input
                         type="text"
-                        name="endIcon"
-                        placeholder="First Name"
+                        icon="endIcon"
+                        placeholder="Placeholder"
                     />
                     <br />
                 </form>
