@@ -1,29 +1,27 @@
- input {
-    max-width: max-content;
-    border-radius: 10px;  
-    margin-bottom: 1rem; 
-} 
-
-.firstName, 
-  .lastName, .md, .Disabled, .helperText, .endIcon, .startIcon, .text {
+input {
     max-width: max-content;
     padding-left: 12px;
     padding-right: 108px;
     padding-top: 18px;
     padding-bottom: 18px;
+    border-radius: 10px;  
+    margin-bottom: 1rem; 
 }
 
+.firstname {
+    background-color: red;
+}
 
-.firstName:hover {
+.firstname:hover {
     border: 1px solid #333333    ;
 }
 
-.firstName:focus {
+.firstname:focus {
     border: 1px solid #2962FF;
     outline: none;
 }
 
-.lastName{
+.lastName {
    border: 1px solid #D32F2F;
 }
 
@@ -37,7 +35,7 @@
 }
 
 
-.Disabled:disabled  {
+input[type="text"]:disabled  {
     background-color: #E0E0E0;
     color: #9E9E9E;
 }
@@ -51,29 +49,14 @@
 }
 
 
-.startIcon::before {
-    content: url(./images/call-24px.svg);
+.iconStart {
+    position: absolute;
+    content: url(/phone.b979c70b.svg);
     left: 0;
     top: 8px;
     padding: 9px 8px;
     transition: 0.3s;
 }
 
-.sm {
-    padding-left: 12px;
-    padding-right: 108px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
 
-.fullSize {
-    max-width: 100%;
-    padding-right: 1081px;
-    padding-top: 18px;
-    padding-bottom: 18px;
-}
-
-.helperText:hover {
-    border: 1px solid #D32F2F;
-}
-
+/*# sourceMappingURL=/input-component.9ad09f98.css.map */
