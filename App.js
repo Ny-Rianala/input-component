@@ -12,69 +12,50 @@ class App extends React.Component {
                     {`<input />`}   
                     <br />
                     <Inputs
-                       label="Label"
-                       input="firstName"
-                       type="text" 
-                       placeholder="Enter First Name"
+                        input="firstName"
                        />
                     <br />
                     {`<Input error />`}
                     <Inputs 
-                       input="lastName"
-                       type="text"
-                       placeholder="Last Name"
-                       required 
+                       input="lastName" 
                        />
                     <br />
                     {`<disable />`}
                     <Inputs 
-                        disabled="Disabled"
-                        type="text" 
-                        placeholder="Disable" 
+                        disabled="Disabled" 
                         />
                     <br />
                     {`<Input helperText=”Some interesting text” />`}
                     <Inputs 
-                       input="helperText"
-                       type="text" 
-                       name="firstName"
-                       placeholder="Placeholder" 
+                       input="helperText" 
                        />
                     <br />
                     {`<Input startIcon />`}
                     <Inputs 
-                      type="text" 
+                      startIcon="phone" 
                       input="startIcon"
-                      placeholder="Placeholder"
                        />
                     <br />
                     {`<Input endIcon />`}
                     <Inputs 
-                      type="text" 
+                      endIcon="lock"
                       input="endIcon" 
-                      placeholder="Placeholder"
                     />
                     <br />
                     {`<Input value="text" />`}
                     <Inputs 
-                      type="text"
-                      input="text" 
-                      placeholder="Text"
+                      text="Text" 
                     />
                     <br />
                     <div>
                         {`<Input size="sm" />`}
                         <Inputs
                             smSize="sm" 
-                            type="text"  
-                            placeholder="Placeholder"
                         />
                         <br />
                         {`<Input size="md" />`}
                         <Inputs 
                             mdSize= "md" 
-                            type="text"  
-                            placeholder="Placeholder"
                         />
                         <br />
                     </div>

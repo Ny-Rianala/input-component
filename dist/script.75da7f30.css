@@ -5,9 +5,9 @@
 } 
 
 .firstName, 
-  .lastName, .md, .Disabled, .helperText, .endIcon, .startIcon, .text {
+  .lastName, .md, .Disabled, .helperText, .endIcon, .startIcon, .text, .Text {
     max-width: max-content;
-    padding-left: 12px;
+    padding-left: 40px;
     padding-right: 108px;
     padding-top: 18px;
     padding-bottom: 18px;
@@ -50,14 +50,22 @@
     margin-top: 2rem;
 }
 
-
-.startIcon::before {
-    content: url(/call-24px.ea8a8149.svg);
-    left: 0;
-    top: 8px;
-    padding: 9px 8px;
-    transition: 0.3s;
+.container {
+    position: relative;
 }
+
+.startIconImage {
+    position: absolute;
+    left: 10px;
+    top: 35px;
+}
+
+.endIconImage {
+    position: absolute;
+    left: 265px;
+    top: 33px;
+}
+
 
 .sm {
     padding-left: 12px;
@@ -77,6 +85,8 @@
     border: 1px solid #D32F2F;
 }
 
-
+label {
+    display: block;
+}
 
 /*# sourceMappingURL=/script.75da7f30.css.map */

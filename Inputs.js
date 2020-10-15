@@ -1,19 +1,31 @@
 import React from "react";
-
+import Phone from "./images/phone.svg"
+import Lock from "./images/lock.svg"
 
 function Inputs(props) {
     console.log(props);
+    console.log(Phone);
+    console.log(Lock);
     return (
-        <div>
-             <input 
+        <div className="container">
+            {props.startIcon ?
+             <img className="startIconImage" src={ Phone } /> 
+             : props.endIcon ?
+             <img className="endIconImage" src={ Lock }/> 
+             :"" } 
+            <label>Label</label>
+            <input 
                 className= 
                     {`
                     ${props.input ? props.input : ""}
+                    ${props.startIcon ? props.startIcon : ""}
                     ${props.disabled ? props.disabled : ""}
                     ${props.smSize ? props.smSize : ""}  
                     ${props.mdSize ? props.mdSize : ""}
-                    ${props.fullWidth ? props.fullWidth : ""}   
-                    `}  
+                    ${props.fullWidth ? props.fullWidth : ""}
+                    ${props.text ? props.text : ""}  
+                    `} 
+                    placeholder="Placeholder" 
              />
                 {props.children}
         </div>        
@@ -22,22 +34,4 @@ function Inputs(props) {
 
 
 export default Inputs;
-
-/*function Components(props) {
-    console.log(props);
-    const input = props.input || props.children;
-	let classes = props.className ? `${props.className}` : "";
-	if (props.firstname) {
-		classes = `${classes} firstname`;
-	}
-	if (props.lastname) {
-		classes = `${classes} ${props.lastname}`;
-	}
-	if (props.icon) {
-		classes = `${classes} ${props.icon}`;
-	}
-	return (
-        <div><i className="fa fa-search"></i></div>
-	);
-}*/
 

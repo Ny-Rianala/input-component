@@ -28357,7 +28357,11 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./images\\call-24px.svg":[["call-24px.ea8a8149.svg","images/call-24px.svg"],"images/call-24px.svg"],"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"Inputs.js":[function(require,module,exports) {
+},{"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"images/phone.svg":[function(require,module,exports) {
+module.exports = "/phone.b979c70b.svg";
+},{}],"images/lock.svg":[function(require,module,exports) {
+module.exports = "/lock.5f96d106.svg";
+},{}],"Inputs.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28367,36 +28371,33 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _phone = _interopRequireDefault(require("./images/phone.svg"));
+
+var _lock = _interopRequireDefault(require("./images/lock.svg"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Inputs(props) {
   console.log(props);
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("input", {
-    className: "\n                    ".concat(props.input ? props.input : "", "\n                    ").concat(props.disabled ? props.disabled : "", "\n                    ").concat(props.smSize ? props.smSize : "", "  \n                    ").concat(props.mdSize ? props.mdSize : "", "\n                    ").concat(props.fullWidth ? props.fullWidth : "", "   \n                    ")
+  console.log(_phone.default);
+  console.log(_lock.default);
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "container"
+  }, props.startIcon ? /*#__PURE__*/_react.default.createElement("img", {
+    className: "startIconImage",
+    src: _phone.default
+  }) : props.endIcon ? /*#__PURE__*/_react.default.createElement("img", {
+    className: "endIconImage",
+    src: _lock.default
+  }) : "", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement("input", {
+    className: "\n                    ".concat(props.input ? props.input : "", "\n                    ").concat(props.startIcon ? props.startIcon : "", "\n                    ").concat(props.disabled ? props.disabled : "", "\n                    ").concat(props.smSize ? props.smSize : "", "  \n                    ").concat(props.mdSize ? props.mdSize : "", "\n                    ").concat(props.fullWidth ? props.fullWidth : "", "\n                    ").concat(props.text ? props.text : "", "  \n                    "),
+    placeholder: "Placeholder"
   }), props.children);
 }
 
 var _default = Inputs;
-/*function Components(props) {
-    console.log(props);
-    const input = props.input || props.children;
-	let classes = props.className ? `${props.className}` : "";
-	if (props.firstname) {
-		classes = `${classes} firstname`;
-	}
-	if (props.lastname) {
-		classes = `${classes} ${props.lastname}`;
-	}
-	if (props.icon) {
-		classes = `${classes} ${props.icon}`;
-	}
-	return (
-        <div><i className="fa fa-search"></i></div>
-	);
-}*/
-
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./images/phone.svg":"images/phone.svg","./images/lock.svg":"images/lock.svg"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28449,44 +28450,25 @@ var App = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("h1", null, "Input Component"), /*#__PURE__*/_react.default.createElement("form", null, "<input />", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_Inputs.default, {
-        label: "Label",
-        input: "firstName",
-        type: "text",
-        placeholder: "Enter First Name"
+        input: "firstName"
       }), /*#__PURE__*/_react.default.createElement("br", null), "<Input error />", /*#__PURE__*/_react.default.createElement(_Inputs.default, {
-        input: "lastName",
-        type: "text",
-        placeholder: "Last Name",
-        required: true
+        input: "lastName"
       }), /*#__PURE__*/_react.default.createElement("br", null), "<disable />", /*#__PURE__*/_react.default.createElement(_Inputs.default, {
-        disabled: "Disabled",
-        type: "text",
-        placeholder: "Disable"
+        disabled: "Disabled"
       }), /*#__PURE__*/_react.default.createElement("br", null), "<Input helperText=\u201DSome interesting text\u201D />", /*#__PURE__*/_react.default.createElement(_Inputs.default, {
-        input: "helperText",
-        type: "text",
-        name: "firstName",
-        placeholder: "Placeholder"
+        input: "helperText"
       }), /*#__PURE__*/_react.default.createElement("br", null), "<Input startIcon />", /*#__PURE__*/_react.default.createElement(_Inputs.default, {
-        type: "text",
-        input: "startIcon",
-        placeholder: "Placeholder"
+        startIcon: "phone",
+        input: "startIcon"
       }), /*#__PURE__*/_react.default.createElement("br", null), "<Input endIcon />", /*#__PURE__*/_react.default.createElement(_Inputs.default, {
-        type: "text",
-        input: "endIcon",
-        placeholder: "Placeholder"
+        endIcon: "lock",
+        input: "endIcon"
       }), /*#__PURE__*/_react.default.createElement("br", null), "<Input value=\"text\" />", /*#__PURE__*/_react.default.createElement(_Inputs.default, {
-        type: "text",
-        input: "text",
-        placeholder: "Text"
+        text: "Text"
       }), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("div", null, "<Input size=\"sm\" />", /*#__PURE__*/_react.default.createElement(_Inputs.default, {
-        smSize: "sm",
-        type: "text",
-        placeholder: "Placeholder"
+        smSize: "sm"
       }), /*#__PURE__*/_react.default.createElement("br", null), "<Input size=\"md\" />", /*#__PURE__*/_react.default.createElement(_Inputs.default, {
-        mdSize: "md",
-        type: "text",
-        placeholder: "Placeholder"
+        mdSize: "md"
       }), /*#__PURE__*/_react.default.createElement("br", null)), "<Input fullWidth />", /*#__PURE__*/_react.default.createElement(_Inputs.default, {
         fullWidth: "fullSize"
       }), /*#__PURE__*/_react.default.createElement("br", null)));
@@ -28538,7 +28520,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53106" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54400" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
