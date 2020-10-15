@@ -28471,7 +28471,7 @@ var App = /*#__PURE__*/function (_React$Component) {
         mdSize: "md"
       }), /*#__PURE__*/_react.default.createElement("br", null)), "<Input fullWidth />", /*#__PURE__*/_react.default.createElement(_Inputs.default, {
         fullWidth: "fullSize"
-      }), /*#__PURE__*/_react.default.createElement("br", null)));
+      }), /*#__PURE__*/_react.default.createElement("br", null), "<Input multiline row=\"4\" />", /*#__PURE__*/_react.default.createElement(_Inputs.default, null), /*#__PURE__*/_react.default.createElement("br", null)));
     }
   }]);
 

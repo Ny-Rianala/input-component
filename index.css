@@ -20,6 +20,7 @@
 
 .firstName:focus {
     border: 1px solid #2962FF;
+    box-shadow: 0 0 0 1px #2962FF;
     outline: none;
 }
 
@@ -75,7 +76,7 @@
 }
 
 .fullSize {
-    max-width: 100%;
+    width: 100%;
     padding-right: 1081px;
     padding-top: 18px;
     padding-bottom: 18px;

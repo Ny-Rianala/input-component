@@ -57,13 +57,17 @@ class App extends React.Component {
                         <Inputs 
                             mdSize= "md" 
                         />
-                        <br />
+                       <br />
                     </div>
                     {`<Input fullWidth />`}
                     <Inputs 
                         fullWidth= "fullSize" 
                     />
-                    <br />
+                       <br />
+                    {`<Input multiline row="4" />`}
+                        <Inputs   
+                            />
+                       <br />
                 </form>
             </main>
         )
