@@ -17,7 +17,7 @@ class App extends React.Component {
                     <br />
                     {`<Input error />`}
                     <Inputs 
-                       input="lastName" 
+                       Error="error" 
                        />
                     <br />
                     {`<disable />`}
@@ -57,17 +57,12 @@ class App extends React.Component {
                         <Inputs 
                             mdSize= "md" 
                         />
-                       <br />
+                    <br />
                     </div>
                     {`<Input fullWidth />`}
                     <Inputs 
                         fullWidth= "fullSize" 
                     />
-                       <br />
-                    {`<Input multiline row="4" />`}
-                        <Inputs   
-                            />
-                       <br />
                 </form>
             </main>
         )

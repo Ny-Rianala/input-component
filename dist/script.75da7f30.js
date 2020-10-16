@@ -28389,8 +28389,10 @@ function Inputs(props) {
   }) : props.endIcon ? /*#__PURE__*/_react.default.createElement("img", {
     className: "endIconImage",
     src: _lock.default
-  }) : "", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement("input", {
-    className: "\n                    ".concat(props.input ? props.input : "", "\n                    ").concat(props.startIcon ? props.startIcon : "", "\n                    ").concat(props.disabled ? props.disabled : "", "\n                    ").concat(props.smSize ? props.smSize : "", "  \n                    ").concat(props.mdSize ? props.mdSize : "", "\n                    ").concat(props.fullWidth ? props.fullWidth : "", "\n                    ").concat(props.text ? props.text : "", "  \n                    "),
+  }) : "", props.Error ? /*#__PURE__*/_react.default.createElement("label", {
+    className: "err"
+  }, "Label") : "", /*#__PURE__*/_react.default.createElement("input", {
+    className: "\n                    ".concat(props.input ? props.input : "", "\n                    ").concat(props.Error ? props.Error : "", "\n                    ").concat(props.startIcon ? props.startIcon : "", "\n                    ").concat(props.disabled ? props.disabled : "", "\n                    ").concat(props.smSize ? props.smSize : "", "  \n                    ").concat(props.mdSize ? props.mdSize : "", "\n                    ").concat(props.fullWidth ? props.fullWidth : "", "\n                    ").concat(props.text ? props.text : "", " \n                    "),
     placeholder: "Placeholder"
   }), props.children);
 }
@@ -28452,7 +28454,7 @@ var App = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("h1", null, "Input Component"), /*#__PURE__*/_react.default.createElement("form", null, "<input />", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_Inputs.default, {
         input: "firstName"
       }), /*#__PURE__*/_react.default.createElement("br", null), "<Input error />", /*#__PURE__*/_react.default.createElement(_Inputs.default, {
-        input: "lastName"
+        Error: "error"
       }), /*#__PURE__*/_react.default.createElement("br", null), "<disable />", /*#__PURE__*/_react.default.createElement(_Inputs.default, {
         disabled: "Disabled"
       }), /*#__PURE__*/_react.default.createElement("br", null), "<Input helperText=\u201DSome interesting text\u201D />", /*#__PURE__*/_react.default.createElement(_Inputs.default, {
@@ -28471,7 +28473,7 @@ var App = /*#__PURE__*/function (_React$Component) {
         mdSize: "md"
       }), /*#__PURE__*/_react.default.createElement("br", null)), "<Input fullWidth />", /*#__PURE__*/_react.default.createElement(_Inputs.default, {
         fullWidth: "fullSize"
-      }), /*#__PURE__*/_react.default.createElement("br", null), "<Input multiline row=\"4\" />", /*#__PURE__*/_react.default.createElement(_Inputs.default, null), /*#__PURE__*/_react.default.createElement("br", null)));
+      })));
     }
   }]);
 
@@ -28520,7 +28522,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54400" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62337" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

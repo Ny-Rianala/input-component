@@ -13,17 +13,18 @@ function Inputs(props) {
              : props.endIcon ?
              <img className="endIconImage" src={ Lock }/> 
              :"" } 
-            <label>Label</label>
+            {props.Error ? <label className="err">Label</label> : ""}
             <input 
                 className= 
                     {`
                     ${props.input ? props.input : ""}
+                    ${props.Error ? props.Error : ""}
                     ${props.startIcon ? props.startIcon : ""}
                     ${props.disabled ? props.disabled : ""}
                     ${props.smSize ? props.smSize : ""}  
                     ${props.mdSize ? props.mdSize : ""}
                     ${props.fullWidth ? props.fullWidth : ""}
-                    ${props.text ? props.text : ""}  
+                    ${props.text ? props.text : ""} 
                     `} 
                     placeholder="Placeholder" 
              />
